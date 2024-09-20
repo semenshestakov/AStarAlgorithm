@@ -41,7 +41,7 @@ public abstract class BaseCellController extends Pane {
     abstract protected void createCell(int i, int j, int _i ,int  _j, int cellSize);
 
     /**
-      Set default type for all cells
+     * Set default type for all cells
      */
     public void resetCommand() {
         for(Cell[] rowCells : this.cells) {
@@ -52,7 +52,7 @@ public abstract class BaseCellController extends Pane {
     }
 
     /**
-      The cells that are on the screen
+     * The cells that are on the screen
      */
     public Cell[][] getCellsInWindow() {
         Group group = (Group)this.getParent();
@@ -102,7 +102,7 @@ public abstract class BaseCellController extends Pane {
         Cell[][] copyCells = new Cell[rangei2 - rangei1 + 1][rangej2 - rangej1 + 1];
 
         for (int i = 0; i < copyCells.length; i++) {
-            System.arraycopy(this.cells[i + rangei1], 0 + rangej1, copyCells[i], 0, copyCells[0].length);
+            System.arraycopy(this.cells[i + rangei1], rangej1, copyCells[i], 0, copyCells[0].length);
         }
 
         return copyCells;

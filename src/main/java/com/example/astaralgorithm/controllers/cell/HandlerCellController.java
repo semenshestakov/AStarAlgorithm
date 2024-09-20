@@ -10,9 +10,9 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
 
-/*
+/**
 * Class handles keystroke events, mouse control
-* */
+*/
 public abstract class HandlerCellController extends BaseCellController {
 
     public Cell startNode = null, finalNode = null;

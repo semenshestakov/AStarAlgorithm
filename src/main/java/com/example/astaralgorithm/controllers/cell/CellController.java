@@ -4,9 +4,9 @@ import com.example.astaralgorithm.objects.Arena;
 import com.example.astaralgorithm.objects.cell.Cell;
 import com.example.astaralgorithm.utils.Updater;
 
-/*
+/**
 * Class CellController -> HandleCellController -> BaseCellController -> Pane(JavaFX)
-* */
+*/
 public class CellController extends HandlerCellController implements Updater {
 
     public CellController(Arena arena) {
@@ -18,5 +18,5 @@ public class CellController extends HandlerCellController implements Updater {
         cells[i][j] = new Cell(_i * cellSize, _j * cellSize , this);
     }
 
-    public void update() { }
+    public void update() {}
 } // End CellController

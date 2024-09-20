@@ -61,7 +61,7 @@ public class AStar {
     }
 
     private List<Node> getPath(Node currentNode) {
-        List<Node> path = new ArrayList<Node>();
+        List<Node> path = new ArrayList<>();
         path.add(currentNode);
         Node parent;
         while ((parent = currentNode.parent) != null) {
@@ -125,6 +125,8 @@ public class AStar {
         if (adjacentNode.isBlock() || this.closedSet.contains(adjacentNode))
             return;
 
+        adjacentNode.graphicalRepresentation.setType(CellTypes.Type.INVESTIGATED);
+
         if (!this.openList.contains(adjacentNode)) {
             adjacentNode.setNodeData(currentNode, cost);
             this.openList.add(adjacentNode);
@@ -135,6 +137,6 @@ public class AStar {
     }
 
     private boolean isRoute(Node currentNode, int col, int row) {
-        return !searchArea[row][currentNode.col].isBlock() && !searchArea[currentNode.row][col].isBlock();
+        return !searchArea[row][currentNode.col].isBlock() || !searchArea[currentNode.row][col].isBlock();
     }
 } // End AStar

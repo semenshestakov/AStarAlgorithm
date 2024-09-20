@@ -75,9 +75,9 @@ public class AStarApplication extends Application implements Updater {
         this.isInit = true;
     }
 
-    //  = = = = = = = = = = = = = = = = = = = =
-    //              Start Program
-    //  = = = = = = = = = = = = = = = = = = = =
+    /**
+     * Start Program
+     */
     public static void main(String[] args) {
         launch(args);
     }
