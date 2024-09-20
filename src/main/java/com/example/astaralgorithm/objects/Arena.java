@@ -90,6 +90,5 @@ public class Arena  extends Group implements Updater {
         this.setScaleX(newScaleX);
         this.setScaleY(newScaleY);
     }
-
-}
+} // End Arena
 

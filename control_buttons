@@ -1,0 +1,21 @@
+Сontrol buttons
+
+
+Zoom:
+"+" ("=")   -       zoom in
+"-"         -       zoom out
+
+Moving around the map:
+"UP", "DOWN", "RIGHT", "Left"
+
+Drawing with cell types:
+"\" ("|")   -       default
+"]" ("}")   -       wall
+"P"         -       start
+"O"         -       finish
+
+Another buttons:
+"BACKSPACE" -       Clear window
+"T"         -       Paints all the cells in the walls (dev)
+"ENTER"     -       Start AStar
+    It starts if the start and finish are fully visible on the screen
